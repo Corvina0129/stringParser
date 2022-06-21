@@ -11,13 +11,13 @@ class NumberDefinerTest {
     private final NumberDefiner numberDefiner = new NumberDefiner();
 
     @ParameterizedTest
-    @ValueSource(strings = {"-1", "234982374", "23.002", "0.0", "-9802999.89283"})
+    @ValueSource(strings = {"-1", "234982374", "23.002", "0.0", "-9802999.89283", "234.0", "-34"})
     void isType_positive(String string) {
         assertTrue(numberDefiner.isType(string));
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"3.4.5", "sdf", "1f", "", "-234-3630"})
+    @ValueSource(strings = {"3.4.5", "sdf", "1f", "", "-234-3630", "123-456"})
     void isType_negative(String string) {
         assertFalse(numberDefiner.isType(string));
     }

@@ -22,7 +22,13 @@ public final class NumberDefiner extends AbstractNumberDefiner {
                     if (b == 46) {
                         amountOfPoints += 1;
                     } else if (b == 45) {
-                        amountOfMinuses += 1;
+                        if (input.charAt(0) != '-') {
+                            // for "123-456"
+                            result = false;
+                            break;
+                        } else {
+                            amountOfMinuses += 1;
+                        }
                     } else {
                         result = false;
                         break;
