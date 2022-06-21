@@ -1,14 +1,14 @@
 package com.github.corvina0129.tests.typedefiners;
 
-import com.github.corvina0129.main.typedefiners.numberdefiner.NumberDefiner;
+import com.github.corvina0129.main.typedefiners.numberdefiner.NumberTypeDefiner;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class NumberDefinerTest {
+class NumberTypeDefinerTest {
 
-    private final NumberDefiner numberDefiner = new NumberDefiner();
+    private final NumberTypeDefiner numberDefiner = new NumberTypeDefiner();
 
     @ParameterizedTest
     @ValueSource(strings = {"-1", "234982374", "23.002", "0.0", "-9802999.89283", "234.0", "-34"})

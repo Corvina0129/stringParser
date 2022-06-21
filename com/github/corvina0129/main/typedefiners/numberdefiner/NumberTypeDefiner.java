@@ -2,7 +2,7 @@ package com.github.corvina0129.main.typedefiners.numberdefiner;
 
 import org.jetbrains.annotations.NotNull;
 
-public final class NumberDefiner extends AbstractNumberDefiner {
+public final class NumberTypeDefiner extends AbstractNumberTypeDefiner {
 
     @Override
     public boolean isType(@NotNull String input) {
