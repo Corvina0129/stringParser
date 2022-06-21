@@ -1,0 +1,35 @@
+package com.github.corvina0129.main.typedefiners.numberdefiner;
+
+import org.jetbrains.annotations.NotNull;
+
+public final class NumberDefiner extends AbstractNumberDefiner {
+
+    @Override
+    public boolean isType(@NotNull String input) {
+        boolean result = true;
+        int amountOfPoints = 0;
+        int amountOfMinuses = 0;
+
+        if (input.isEmpty()) {
+            result = false;
+        } else {
+            for (byte b : input.getBytes()) {
+                if (amountOfPoints > 1 || amountOfMinuses > 1){
+                    result = false;
+                    break;
+                }
+                if (!(b >= 48 && b <= 57)) {
+                    if (b == 46) {
+                        amountOfPoints += 1;
+                    } else if (b == 45) {
+                        amountOfMinuses += 1;
+                    } else {
+                        result = false;
+                        break;
+                    }
+                }
+            }
+        }
+        return result;
+    }
+}
