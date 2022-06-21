@@ -9,14 +9,10 @@ import java.util.List;
 
 public final class BaseConverter implements Converter {
 
-    private final TypeDefiner isNumber;
-    private final List<Pair<TypeDefiner, TypeConverter>> pairsForNumbers;
-    private final List<Pair<TypeDefiner, TypeConverter>> pairsNotForNumber;
+    private final List<Pair<TypeDefiner, TypeConverter>> pairList;
 
-    public BaseConverter(TypeDefiner numberDefiner, List<Pair<TypeDefiner, TypeConverter>> pairsForNumbers, List<Pair<TypeDefiner, TypeConverter>> pairsNotForNumber) {
-        this.isNumber = numberDefiner;
-        this.pairsForNumbers = pairsForNumbers;
-        this.pairsNotForNumber = pairsNotForNumber;
+    public BaseConverter(List<Pair<TypeDefiner, TypeConverter>> pairsForNumbers) {
+        this.pairList = pairsForNumbers;
     }
 
     @Override
@@ -24,19 +20,10 @@ public final class BaseConverter implements Converter {
         List<Object> result = new ArrayList<>();
 
         for (String string : strings) {
-            if (isNumber.isType(string)) {
-                for (Pair<TypeDefiner, TypeConverter> pair : pairsForNumbers) {
-                    if (pair.first().isType(string)) {
-                        result.add(pair.second().convert(string));
-                        break;
-                    }
-                }
-            } else {
-                for (Pair<TypeDefiner, TypeConverter> pair : pairsNotForNumber) {
-                    if (pair.first().isType(string)) {
-                        result.add(pair.second().convert(string));
-                        break;
-                    }
+            for (Pair<TypeDefiner, TypeConverter> pair : pairList) {
+                if (pair.first().isType(string)) {
+                    result.add(pair.second().convert(string));
+                    break;
                 }
             }
         }

@@ -3,6 +3,7 @@ package com.github.corvina0129.main.typeconverters.numberconverter;
 import org.jetbrains.annotations.NotNull;
 
 public final class NumberTypeConverter extends AbstractNumberTypeConverter {
+
     @Override
     public Number convert(@NotNull String string) {
 
@@ -12,8 +13,6 @@ public final class NumberTypeConverter extends AbstractNumberTypeConverter {
         Double afterDecimalCount = .0;
         int isNegative = 1;
         boolean flag = false;
-
-        int count = string.length();
 
         if (string.charAt(0) == '-') {
             isNegative = -1;
@@ -47,6 +46,5 @@ public final class NumberTypeConverter extends AbstractNumberTypeConverter {
             result = beforeDecimal;
         }
         return result * isNegative;
-        // todo если afterDecimalCount больше 1, то трансформатор один, если нет, то другой
     }
 }
