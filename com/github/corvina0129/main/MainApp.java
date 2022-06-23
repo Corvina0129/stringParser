@@ -2,6 +2,7 @@ package com.github.corvina0129.main;
 
 import com.github.corvina0129.main.converter.BaseConverter;
 import com.github.corvina0129.main.parser.BaseParser;
+import com.github.corvina0129.main.splitter.BaseSplitter;
 import com.github.corvina0129.main.typeconverters.BooleanTypeConverter;
 import com.github.corvina0129.main.typeconverters.CharTypeConverter;
 import com.github.corvina0129.main.typeconverters.NumberTypeConverter;
@@ -18,6 +19,8 @@ import java.util.List;
 public class MainApp {
     public static void main(String[] args) {
 
+        final BaseSplitter splitter = new BaseSplitter();
+
         final BaseConverter converter = new BaseConverter(Arrays.asList(
                 Pair.of(new NumberTypeDefiner(), new NumberTypeConverter()),
                 Pair.of(new StringTypeDefiner(), new StringTypeConverter()),
@@ -25,8 +28,8 @@ public class MainApp {
                 Pair.of(new BooleanTypeDefiner(), new BooleanTypeConverter())
         ));
 
-        final BaseParser nextlineParser = new BaseParser("\n", converter);
-        final BaseParser semicolonParser = new BaseParser(";", converter);
+        final BaseParser nextlineParser = new BaseParser("\n", splitter, converter);
+        final BaseParser semicolonParser = new BaseParser(";", splitter, converter);
 
         String first = "username\nuser01\nage\n16\ncity\npekin";
         String second = "id;author;hemingway;book;for whom the bell tolls;sales;9097397.0;pricePerBook;889.50";
