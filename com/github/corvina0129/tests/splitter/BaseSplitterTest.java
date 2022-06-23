@@ -1,13 +1,13 @@
 package com.github.corvina0129.tests.splitter;
 
-import com.github.corvina0129.main.splitter.BaseSplitter;
+import com.github.corvina0129.main.splitter.Splitter;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class BaseSplitterTest {
 
-    private final BaseSplitter baseSplitter = new BaseSplitter();
+    private final Splitter<String> baseSplitter = new Splitter.Base();
 
     @Test
     void split_nextline() {
