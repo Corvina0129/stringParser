@@ -1,8 +1,8 @@
-package com.github.corvina0129.main.typedefiners.stringdefiner;
+package com.github.corvina0129.main.typedefiners;
 
 import org.jetbrains.annotations.NotNull;
 
-public final class StringTypeDefiner extends AbstractStringTypeDefiner {
+public final class StringTypeDefiner implements TypeDefiner {
 
     @Override
     public boolean isType(@NotNull String input) {

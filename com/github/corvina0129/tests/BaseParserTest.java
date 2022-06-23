@@ -2,14 +2,14 @@ package com.github.corvina0129.tests;
 
 import com.github.corvina0129.main.converter.BaseConverter;
 import com.github.corvina0129.main.parser.BaseParser;
-import com.github.corvina0129.main.typeconverters.booleanconverter.BooleanTypeConverter;
-import com.github.corvina0129.main.typeconverters.charconverter.CharTypeConverter;
-import com.github.corvina0129.main.typeconverters.numberconverter.NumberTypeConverter;
-import com.github.corvina0129.main.typeconverters.stringconverter.StringTypeConverter;
-import com.github.corvina0129.main.typedefiners.booleandefiner.BooleanTypeDefiner;
-import com.github.corvina0129.main.typedefiners.chardefiner.CharTypeDefiner;
-import com.github.corvina0129.main.typedefiners.numberdefiner.NumberTypeDefiner;
-import com.github.corvina0129.main.typedefiners.stringdefiner.StringTypeDefiner;
+import com.github.corvina0129.main.typeconverters.BooleanTypeConverter;
+import com.github.corvina0129.main.typeconverters.CharTypeConverter;
+import com.github.corvina0129.main.typeconverters.NumberTypeConverter;
+import com.github.corvina0129.main.typeconverters.StringTypeConverter;
+import com.github.corvina0129.main.typedefiners.BooleanTypeDefiner;
+import com.github.corvina0129.main.typedefiners.CharTypeDefiner;
+import com.github.corvina0129.main.typedefiners.NumberTypeDefiner;
+import com.github.corvina0129.main.typedefiners.StringTypeDefiner;
 import com.github.corvina0129.main.utils.Pair;
 import org.junit.jupiter.api.Test;
 

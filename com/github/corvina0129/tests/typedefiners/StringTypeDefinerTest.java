@@ -1,6 +1,6 @@
 package com.github.corvina0129.tests.typedefiners;
 
-import com.github.corvina0129.main.typedefiners.stringdefiner.StringTypeDefiner;
+import com.github.corvina0129.main.typedefiners.StringTypeDefiner;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 

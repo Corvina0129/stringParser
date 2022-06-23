@@ -1,16 +1,16 @@
-package com.github.corvina0129.main.typeconverters.numberconverter;
+package com.github.corvina0129.main.typeconverters;
 
 import org.jetbrains.annotations.NotNull;
 
-public final class NumberTypeConverter extends AbstractNumberTypeConverter {
+public final class NumberTypeConverter implements TypeConverter<Double> {
 
     @Override
-    public Number convert(@NotNull String string) {
+    public Double convert(@NotNull String string) {
 
-        Double result = .0;
-        Double beforeDecimal = .0;
-        Double afterDecimal = .0;
-        Double afterDecimalCount = .0;
+        double result;
+        double beforeDecimal = .0;
+        double afterDecimal = .0;
+        double afterDecimalCount = .0;
         int isNegative = 1;
         boolean flag = false;
 
@@ -45,6 +45,7 @@ public final class NumberTypeConverter extends AbstractNumberTypeConverter {
         else {
             result = beforeDecimal;
         }
+
         return result * isNegative;
     }
 }

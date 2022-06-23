@@ -1,6 +1,6 @@
 package com.github.corvina0129.tests.typeconverters;
 
-import com.github.corvina0129.main.typeconverters.numberconverter.NumberTypeConverter;
+import com.github.corvina0129.main.typeconverters.NumberTypeConverter;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
